@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna Apps</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <script type="text/javascript">
+        amzn_assoc_ad_type = "responsive_search_widget";
+        amzn_assoc_tracking_id = ".y-21";
+        amzn_assoc_marketplace = "amazon";
+        amzn_assoc_region = "IN";
+        amzn_assoc_placement = "";
+        amzn_assoc_search_type = "search_widget";
+        amzn_assoc_width = "auto";
+        amzn_assoc_height = "auto";
+        amzn_assoc_default_search_category = "";
+        amzn_assoc_default_search_key = "Srila Prabhupada Books";
+        amzn_assoc_theme = "light";
+        amzn_assoc_bg_color = "FFFFFF";
+    </script>
+    <script src="//z-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&Marketplace=IN"></script>
+
+    <div id="footer">
+        <script type="text/javascript" language="javascript">
+            var aax_size = '728x90';
+            var aax_pubname = '.y-21';
+            var aax_src = '302';
+        </script>
+        <script type="text/javascript" language="javascript" src="http://c.amazon-adsystem.com/aax2/assoc.js"></script>
+
+        <div style=" max-width: 600px; margin: auto;">
+            <a id="r" target="_blank">
+                <img id="logo" style="max-width: 80px; float: left;">
+                <h1 id="title"></h1>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        let refs = [
+            'https://play.google.com/store/apps/details?id=c.m.wa.sticker.SrilaPrabhupadaQuotes.free'
+        ];
+        let titles = [
+            'Srila Prabhupada Daily Quotes WhatsApp Stickers'
+        ];
+        let logos = [
+            'https://lh3.googleusercontent.com/75FbQ9AzLpbPWB7Oc--nSs-tdKOVziZPOvIXgmNEEc8kTML_mVM8myrBLvLDDfSC-kc=s180'
+        ]
+        let str = window.location.toString();
+        let n = str.indexOf('?'),
+            ind = 0;
+        if (n > 0 && !isNaN(ind = str.substr(n + 1))) {
+            document.getElementById("r").href = refs[ind];
+            document.getElementById('logo').src = logos[ind];
+            document.getElementById('title').innerText = titles[ind];
+            document.getElementById("r").click();
+        }
+    </script>
+    <style>
+        #footer {
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+</body>
+
+</html>
