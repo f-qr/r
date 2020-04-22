@@ -28,7 +28,7 @@
 
     <div>
         <ul id="menu">
-            <li id="shop">🎉 <a href="https://amzn.to/2XQrOMW" target="_blank">Shop</a></li>&emsp;
+            <li id="shop">🎉 <a href="https://amzn.to/34Uc1OA" target="_blank">Shop</a></li>&emsp;
             <li id="help">🤝 Help and Feedback</li>&emsp;
             <li id="contribute">💖 <a href="https://krishna-apps.github.io/?hk=contribute" target="_blank">Contribute</a></li>&emsp;
             <li id="scan">📲 Scan QR to Open this page</li>
@@ -48,7 +48,7 @@
         amzn_assoc_width = "auto";
         amzn_assoc_height = "auto";
         amzn_assoc_default_search_category = "";
-        amzn_assoc_default_search_key = "Srila Prabhupada Books";
+        amzn_assoc_default_search_key = "Bhagavad Gita As It Is";
         amzn_assoc_theme = "light";
         amzn_assoc_bg_color = "FFFFFF";
     </script>
@@ -69,7 +69,35 @@
             </a>
         </div>
     </div>
-
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        ul#menu li {
+            display: inline-flexbox;
+            cursor: pointer;
+        }
+        
+        #footer {
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        @media screen and (max-width: 800px) {
+            ul#menu li {
+                display: block;
+                cursor: pointer;
+                text-align: left;
+            }
+            #form {
+                height: 80vh;
+            }
+        }
+    </style>
     <script>
         document.getElementById("help").onclick = function() {
             document.getElementById("form").style.display = "block";
@@ -118,34 +146,6 @@
             document.getElementById('qr').src = '3/x.webp'
         }
     </script>
-    <style>
-        body {
-            text-align: center;
-        }
-        
-        ul#menu li {
-            display: inline;
-            cursor: pointer;
-        }
-        
-        #footer {
-            text-align: center;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
-        
-        @media screen and (max-width: 800px) {
-            ul#menu li {
-                display: block;
-                cursor: pointer;
-            }
-            #form {
-                width: 100vh;
-            }
-        }
-    </style>
 </body>
 
 </html>
