@@ -25,6 +25,19 @@
 </head>
 
 <body>
+
+    <div>
+        <ul id="menu">
+            <li id="shop">🎉 <a href="https://amzn.to/2XQrOMW" target="_blank">Shop</a></li>&emsp;
+            <li id="help">🤝 Help and Feedback</li>&emsp;
+            <li id="contribute">💖 <a href="https://krishna-apps.github.io/?hk=contribute" target="_blank">Contribute</a></li>&emsp;
+            <li id="scan">📲 Scan QR to Open this page</li>
+        </ul>
+    </div>
+    <div id="form" style="text-align: center; height: 45vh; overflow: auto; scrollbar-width: 2px; display: none;">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSftXQlLqZEK5bci3oG1odL9t3s-_vZZ4UbfRcqzYplrkZYe8g/viewform?embedded=true" width="640" height="1281" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+    <img id="qr" style="height: 40vh; margin-left: auto; margin-right: auto; display: none;">
     <script type="text/javascript">
         amzn_assoc_ad_type = "responsive_search_widget";
         amzn_assoc_tracking_id = ".y-21";
@@ -58,26 +71,63 @@
     </div>
 
     <script>
+        document.getElementById("help").onclick = function() {
+            document.getElementById("form").style.display = "block";
+            document.getElementById("qr").style.display = "none";
+        }
+        document.getElementById("shop").onclick = function() {
+            document.getElementById("form").style.display = "none";
+            document.getElementById("qr").style.display = "none";
+        }
+        document.getElementById("contribute").onclick = function() {
+            document.getElementById("form").style.display = "none";
+            document.getElementById("qr").style.display = "none";
+        }
+        document.getElementById("scan").onclick = function() {
+            document.getElementById("form").style.display = "none";
+            document.getElementById("qr").style.display = "block";
+        }
         let refs = [
-            'https://play.google.com/store/apps/details?id=c.m.wa.sticker.SrilaPrabhupadaQuotes.free'
+            'c.m.wa.sticker.SrilaPrabhupadaQuotes.free',
+            'c.m.wa.sticker.SrilaPrabhupadaQuotes.adsFree',
+            'c.m.wa.sticker.SrilaPrabhupada.free',
+            'c.m.wa.sticker.SrilaPrabhupada.adsFree',
         ];
         let titles = [
-            'Srila Prabhupada Daily Quotes WhatsApp Stickers'
+            'Srila Prabhupada Daily Quotes WhatsApp Stickers',
+            'Srila Prabhupada Daily Quotes WhatsApp Stickers',
+            'Srila Prabhupada WhatsApp Stickers',
+            'Srila Prabhupada WhatsApp Stickers'
         ];
         let logos = [
+            'https://lh3.googleusercontent.com/75FbQ9AzLpbPWB7Oc--nSs-tdKOVziZPOvIXgmNEEc8kTML_mVM8myrBLvLDDfSC-kc=s180',
+            'https://lh3.googleusercontent.com/75FbQ9AzLpbPWB7Oc--nSs-tdKOVziZPOvIXgmNEEc8kTML_mVM8myrBLvLDDfSC-kc=s180',
+            'https://lh3.googleusercontent.com/75FbQ9AzLpbPWB7Oc--nSs-tdKOVziZPOvIXgmNEEc8kTML_mVM8myrBLvLDDfSC-kc=s180',
             'https://lh3.googleusercontent.com/75FbQ9AzLpbPWB7Oc--nSs-tdKOVziZPOvIXgmNEEc8kTML_mVM8myrBLvLDDfSC-kc=s180'
         ]
         let str = window.location.toString();
         let n = str.indexOf('?'),
             ind = 0;
         if (n > 0 && !isNaN(ind = str.substr(n + 1))) {
-            document.getElementById("r").href = refs[ind];
+            document.getElementById("r").href = 'https://play.google.com/store/apps/details?id=' + refs[ind];
+            document.getElementById('qr').src = '3/' + ind + '.webp'
             document.getElementById('logo').src = logos[ind];
-            document.getElementById('title').innerText = titles[ind];
+            document.getElementById('title').innerText = titles[ind] + ' App';
             document.getElementById("r").click();
+        } else {
+            document.getElementById('qr').src = '3/x.webp'
         }
     </script>
     <style>
+        body {
+            text-align: center;
+        }
+        
+        ul#menu li {
+            display: inline;
+            cursor: pointer;
+        }
+        
         #footer {
             text-align: center;
             position: absolute;
