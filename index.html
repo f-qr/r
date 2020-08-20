@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krishna Apps</title>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5HH62KH');</script>
+    <!-- End Google Tag Manager -->
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -25,17 +35,23 @@
 </head>
 
 <body>
-
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HH62KH" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div>
         <ul id="menu">
             <li id="shop">🎉 <a href="https://amzn.to/34Uc1OA" target="_blank">Shop</a></li>&emsp;
             <li id="help">🤝 Help and Feedback</li>&emsp;
-            <li id="contribute">💖 <a href="https://krishna-apps.github.io/?hk=contribute" target="_blank">Contribute</a></li>&emsp;
+            <li id="contribute">💖 <a href="https://krishna-apps.github.io/?hk=contribute"
+                    target="_blank">Contribute</a></li>&emsp;
             <li id="scan">📲 Scan QR to Open this page</li>
         </ul>
     </div>
     <div id="form" style="text-align: center; height: 48vh; overflow: auto; scrollbar-width: 2px; display: none;">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSftXQlLqZEK5bci3oG1odL9t3s-_vZZ4UbfRcqzYplrkZYe8g/viewform?embedded=true" width="640" height="1281" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSftXQlLqZEK5bci3oG1odL9t3s-_vZZ4UbfRcqzYplrkZYe8g/viewform?embedded=true"
+            width="640" height="1281" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
     <img id="qr" style="height: 40vh; margin-left: auto; margin-right: auto; display: none;">
     <script type="text/javascript">
@@ -52,7 +68,8 @@
         amzn_assoc_theme = "light";
         amzn_assoc_bg_color = "FFFFFF";
     </script>
-    <script src="//z-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&Marketplace=IN"></script>
+    <script
+        src="//z-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&Marketplace=IN"></script>
 
     <div id="footer">
         <script type="text/javascript" language="javascript">
@@ -73,12 +90,12 @@
         body {
             text-align: center;
         }
-        
+
         ul#menu li {
             display: inline-flex;
             cursor: pointer;
         }
-        
+
         #footer {
             text-align: center;
             position: absolute;
@@ -86,32 +103,33 @@
             left: 0;
             right: 0;
         }
-        
+
         @media screen and (max-width: 800px) {
             ul#menu li {
                 display: block;
                 cursor: pointer;
                 text-align: left;
             }
+
             #form {
                 height: 80vh;
             }
         }
     </style>
     <script>
-        document.getElementById("help").onclick = function() {
+        document.getElementById("help").onclick = function () {
             document.getElementById("form").style.display = "block";
             document.getElementById("qr").style.display = "none";
         }
-        document.getElementById("shop").onclick = function() {
+        document.getElementById("shop").onclick = function () {
             document.getElementById("form").style.display = "none";
             document.getElementById("qr").style.display = "none";
         }
-        document.getElementById("contribute").onclick = function() {
+        document.getElementById("contribute").onclick = function () {
             document.getElementById("form").style.display = "none";
             document.getElementById("qr").style.display = "none";
         }
-        document.getElementById("scan").onclick = function() {
+        document.getElementById("scan").onclick = function () {
             document.getElementById("form").style.display = "none";
             document.getElementById("qr").style.display = "block";
         }
