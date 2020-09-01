@@ -41,18 +41,28 @@
     <!-- End Google Tag Manager (noscript) -->
     <div>
         <ul id="menu">
+            <li><b>$ </b> <a href="https://www.badabusiness.com/dd/BIMK003866">
+                    <b>Learn + Earn</b></a></li>&emsp;
             <li id="shop">🎉 <a href="https://amzn.to/34Uc1OA" target="_blank">Shop</a></li>&emsp;
             <li id="help">🤝 Help and Feedback</li>&emsp;
             <li id="contribute">💖 <a href="https://krishna-apps.github.io/?hk=contribute"
                     target="_blank">Contribute</a></li>&emsp;
             <li id="scan">📲 Scan QR to Open this page</li>
         </ul>
+        <hr>
     </div>
-    <div id="form" style="text-align: center; height: 48vh; overflow: auto; scrollbar-width: 2px; display: none;">
-        <iframe
+
+    <div style=" max-width: 600px; margin: auto;">
+        <a id="r" target="_blank">
+            <img id="logo" style="max-width: 80px; float: left;">
+            <h1 id="title"></h1>
+        </a>
+    </div>
+    <!-- <div id="form" style="text-align: center; height: 70vh; overflow: auto; scrollbar-width: 2px; display: none;"> -->
+        <iframe id="form"
             src="https://docs.google.com/forms/d/e/1FAIpQLSftXQlLqZEK5bci3oG1odL9t3s-_vZZ4UbfRcqzYplrkZYe8g/viewform?embedded=true"
-            width="640" height="1281" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div>
+            width="100%" height="2010" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <!-- </div> -->
     <img id="qr" style="height: 40vh; margin-left: auto; margin-right: auto; display: none;">
     <script type="text/javascript">
         amzn_assoc_ad_type = "responsive_search_widget";
@@ -78,13 +88,6 @@
             var aax_src = '302';
         </script>
         <script type="text/javascript" language="javascript" src="http://c.amazon-adsystem.com/aax2/assoc.js"></script>
-
-        <div style=" max-width: 600px; margin: auto;">
-            <a id="r" target="_blank">
-                <img id="logo" style="max-width: 80px; float: left;">
-                <h1 id="title"></h1>
-            </a>
-        </div>
     </div>
     <style>
         body {
@@ -98,10 +101,6 @@
 
         #footer {
             text-align: center;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
         }
 
         @media screen and (max-width: 800px) {
@@ -110,74 +109,9 @@
                 cursor: pointer;
                 text-align: left;
             }
-
-            #form {
-                height: 80vh;
-            }
         }
     </style>
-    <script>
-        document.getElementById("help").onclick = function () {
-            document.getElementById("form").style.display = "block";
-            document.getElementById("qr").style.display = "none";
-        }
-        document.getElementById("shop").onclick = function () {
-            document.getElementById("form").style.display = "none";
-            document.getElementById("qr").style.display = "none";
-        }
-        document.getElementById("contribute").onclick = function () {
-            document.getElementById("form").style.display = "none";
-            document.getElementById("qr").style.display = "none";
-        }
-        document.getElementById("scan").onclick = function () {
-            document.getElementById("form").style.display = "none";
-            document.getElementById("qr").style.display = "block";
-        }
-        let refs = [
-            'c.m.wa.sticker.SrilaPrabhupadaQuotes.free',
-            'c.m.wa.sticker.SrilaPrabhupadaQuotes.adsFree',
-            'c.m.wa.sticker.SrilaPrabhupada.free',
-            'c.m.wa.sticker.SrilaPrabhupada.adsFree',
-            'c.m.wa.sticker.modi.free',
-            'c.m.wa.sticker.modi.adsFree',
-            'c.m.wa.sticker.love.free',
-            'c.m.wa.sticker.love.adsFree',
-            'c.m.wa.sticker.maker.free',
-            'c.m.wa.sticker.maker.adsFree',
-        ];
-        let titles = [
-            'Srila Prabhupada Daily Quotes WhatsApp Stickers - free',
-            'Srila Prabhupada Daily Quotes WhatsApp Stickers',
-            'Srila Prabhupada WhatsApp Stickers - free',
-            'Srila Prabhupada WhatsApp Stickers',
-            'Covid - 19 and PM Modi WhatsApp Stickers - free',
-            'Covid - 19 and PM Modi WhatsApp Stickers',
-            'Love Story WhatsApp Stickers - free',
-            'Love Story WhatsApp Stickers',
-        ];
-        let logos = [
-            'https://lh3.googleusercontent.com/itih4qVZIXWqYbyTykZPTHoNNASBm7uq3DWhRECw80ESd7XU9I6JoPoyrNmUuuoGXWo=s180',
-            'https://lh3.googleusercontent.com/itih4qVZIXWqYbyTykZPTHoNNASBm7uq3DWhRECw80ESd7XU9I6JoPoyrNmUuuoGXWo=s180',
-            'https://lh3.googleusercontent.com/U7Dw9WppUZ8ya2hsM7VsWeTZCF2kGHbZ8G0YN18axUJMs8OxPO0zV0pR81jyX6XD2w=s180',
-            'https://lh3.googleusercontent.com/U7Dw9WppUZ8ya2hsM7VsWeTZCF2kGHbZ8G0YN18axUJMs8OxPO0zV0pR81jyX6XD2w=s180',
-            'https://f-qr.github.io/r/covid/3/3.webp',
-            'https://f-qr.github.io/r/covid/3/3.webp',
-            'https://f-qr.github.io/r/love/4/21.webp',
-            'https://f-qr.github.io/r/love/4/21.webp'
-        ]
-        let str = window.location.toString();
-        let n = str.indexOf('?'),
-            ind = 0;
-        if (n > 0 && !isNaN(ind = str.substr(n + 1))) {
-            document.getElementById("r").href = 'https://play.google.com/store/apps/details?id=' + refs[ind];
-            document.getElementById('qr').src = '3/' + ind + '.webp'
-            document.getElementById('logo').src = logos[ind];
-            document.getElementById('title').innerText = titles[ind] + ' App';
-            document.getElementById("r").click();
-        } else {
-            document.getElementById('qr').src = '3/x.webp'
-        }
-    </script>
+    <script src="main.js"></script>
 </body>
 
 </html>
