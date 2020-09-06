@@ -121,9 +121,10 @@ if (n > 0 && !isNaN(ind = str.substr(n + 1))) {
     document.getElementById('qr').src = '3/' + ind + '.webp'
     document.getElementById('logo').src = hk[ind].logo;
     document.getElementById('title').innerText = hk[ind].title + ' App';
-    document.getElementById("r").click();
     if (n1 > 0)
         location = hk[ind].hasOwnProperty('privacy') && hk[ind].privacy.startsWith('http') ? hk[ind].privacy : 'https://krishna-apps.github.io/WhatsApp-Stickers';
+    else
+        document.getElementById("r").click();
 } else {
     document.getElementById('qr').src = '3/x.webp'
 }
