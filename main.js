@@ -86,12 +86,14 @@ let hk = {
     "13": {
         ref: 'c.m.wa.sticker.ibc.free',
         title: 'IBC Assistant - free',
-        logo: ''
+        logo: '',
+        privacy: 'https://bada-business-ibc.web.app/app/privacy'
     },
     "14": {
         ref: 'c.m.wa.sticker.ibc.adsFree',
         title: 'IBC Assistant',
-        logo: ''
+        logo: '',
+        privacy: 'https://bada-business-ibc.web.app/app/privacy'
     },
     "21": {
         ref: 'com.mayank.krishnaapps.shravanotsava',
