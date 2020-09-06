@@ -103,17 +103,27 @@ let hk = {
         title: 'Rādhānāth Swāmi Lectures and Kirtans',
         logo: ''
     },
+    "23": {
+        ref: 'com.mayank.krishnaapps.lokanathswami',
+        title: 'Lokanāth Swāmi Lectures and Kirtans',
+        logo: ''
+    },
 }
 
 let str = window.location.toString();
-let n = str.indexOf('?'),
+let n = str.indexOf('?'), n1 = str.indexOf('&p'),
     ind = 0;
+if (n1 > 0) str = str.substr(0, n1);
 if (n > 0 && !isNaN(ind = str.substr(n + 1))) {
     document.getElementById("r").href = 'https://play.google.com/store/apps/details?id=' + hk[ind].ref;
     document.getElementById('qr').src = '3/' + ind + '.webp'
     document.getElementById('logo').src = hk[ind].logo;
     document.getElementById('title').innerText = hk[ind].title + ' App';
     document.getElementById("r").click();
+    if (n1 > 0 && hk[ind].hasOwnProperty('privacy') && hk[ind].privacy.startsWith('http'))
+        location = hk[ind].privacy;
+    else
+        location = 'https://krishna-apps.github.io/WhatsApp-Stickers';
 } else {
     document.getElementById('qr').src = '3/x.webp'
 }
