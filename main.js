@@ -19,12 +19,12 @@ document.getElementById('help').click();
 
 let hk = {
     "0": {
-        ref: 'c.m.wa.sticker.PrabhupadaQuotes.free',
+        ref: 'c.m.wa.sticker.SrilaPrabhupadaQuotes.free',
         title: 'Srila Prabhupada Daily Quotes Stickers - free',
         logo: 'https://lh3.googleusercontent.com/itih4qVZIXWqYbyTykZPTHoNNASBm7uq3DWhRECw80ESd7XU9I6JoPoyrNmUuuoGXWo=s180'
     },
     "1": {
-        ref: 'c.m.wa.sticker.PrabhupadaQuotes.adsFree',
+        ref: 'c.m.wa.sticker.SrilaPrabhupadaQuotes.adsFree',
         title: 'Srila Prabhupada Daily Quotes Stickers',
         logo: 'https://lh3.googleusercontent.com/itih4qVZIXWqYbyTykZPTHoNNASBm7uq3DWhRECw80ESd7XU9I6JoPoyrNmUuuoGXWo=s180'
     },
@@ -120,10 +120,8 @@ if (n > 0 && !isNaN(ind = str.substr(n + 1))) {
     document.getElementById('logo').src = hk[ind].logo;
     document.getElementById('title').innerText = hk[ind].title + ' App';
     document.getElementById("r").click();
-    if (n1 > 0 && hk[ind].hasOwnProperty('privacy') && hk[ind].privacy.startsWith('http'))
-        location = hk[ind].privacy;
-    else
-        location = 'https://krishna-apps.github.io/WhatsApp-Stickers';
+    if (n1 > 0)
+        location = hk[ind].hasOwnProperty('privacy') && hk[ind].privacy.startsWith('http') ? hk[ind].privacy : 'https://krishna-apps.github.io/WhatsApp-Stickers';
 } else {
     document.getElementById('qr').src = '3/x.webp'
 }
