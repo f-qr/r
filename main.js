@@ -39,12 +39,12 @@ let hk = {
         logo: 'https://lh3.googleusercontent.com/U7Dw9WppUZ8ya2hsM7VsWeTZCF2kGHbZ8G0YN18axUJMs8OxPO0zV0pR81jyX6XD2w=s180'
     },
     "4": {
-        ref: 'c.m.wa.sticker.modi1.free',
+        ref: 'c.m.wa.sticker.modi.free',
         title: 'PM Modi Stickers - free',
         logo: '/covid/1/3.webp'
     },
     "5": {
-        ref: 'c.m.wa.sticker.modi1.adsFree',
+        ref: 'c.m.wa.sticker.modi.adsFree',
         title: 'PM Modi Stickers',
         logo: '/covid/1/3.webp'
     },
