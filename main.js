@@ -110,6 +110,12 @@ let hk = {
         title: 'Lokanāth Swāmi Lectures and Kirtans',
         logo: ''
     },
+    "31": {
+        ref: 'c.kapps.easymessage.free',
+        title: 'Easy Message/Chat Without Saving The Phone Number',
+        logo: '',
+        privacy: 'fb'
+    }
 }
 
 let str = window.location.toString();
@@ -121,9 +127,18 @@ if (n > 0 && !isNaN(ind = str.substr(n + 1))) {
     document.getElementById('qr').src = '3/' + ind + '.webp'
     document.getElementById('logo').src = hk[ind].logo;
     document.getElementById('title').innerText = hk[ind].title + ' App';
-    if (n1 > 0)
-        location = hk[ind].hasOwnProperty('privacy') && hk[ind].privacy.startsWith('http') ? hk[ind].privacy : 'https://krishna-apps.github.io/WhatsApp-Stickers';
-    else
+    if (n1 > 0) {
+        if (hk[ind].hasOwnProperty('privacy') && hk[ind].privacy == 'fb') {
+            document.getElementById("form").style.display = "none";
+            var hkhk = document.getElementsByClassName('app-name');
+            for (var i = 0; i < hkhk.length; i++) {
+                hkhk.item(i).innerHTML = `<a href="https://play.google.com/store/apps/details?id=${hk[ind].ref}" target="_blank" rel="noopener noreferrer">${hk[ind].title}</a>`
+            }
+            document.getElementById('fbprivacy').style.visibility = 'visible';
+        } else {
+            location = hk[ind].hasOwnProperty('privacy') && hk[ind].privacy.startsWith('http') ? hk[ind].privacy : 'https://krishna-apps.github.io/WhatsApp-Stickers';
+        }
+    } else
         document.getElementById("r").click();
 } else {
     document.getElementById('qr').src = '3/x.webp'
